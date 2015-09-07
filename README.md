@@ -19,11 +19,19 @@ And then execute:
 
 	$ bundle install
 
-Or install it yourself as:
+### Dependencies
 
-	$ bundle exec hakobus-notifier
+- [terminal-notifier](https://github.com/julienXX/terminal-notifier)
+- [nokogiri](https://github.com/sparklemotion/nokogiri)
+- [anemone](https://github.com/chriskite/anemone)
 
 ## Usage
+
+To run notification:
+
+	$ bundle exec hakobus-notifier
+	
+## Setup
 
 Add this line to your crontab:
 
