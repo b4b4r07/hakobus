@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'hakobus_notifier'
+
+HakobusNotifier::CLI.start
