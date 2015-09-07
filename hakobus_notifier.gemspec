@@ -2,8 +2,8 @@
 require File.expand_path('../lib/hakobus_notifier/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Sho Kusano"]
-  gem.email         = ["rosylilly@aduca.org"]
+  gem.authors       = ["b4b4r07"]
+  gem.email         = ["b4b4r07@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""

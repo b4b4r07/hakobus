@@ -21,6 +21,7 @@ And then execute:
 
 ### Dependencies
 
+- [thor](https://github.com/erikhuda/thor)
 - [terminal-notifier](https://github.com/julienXX/terminal-notifier)
 - [nokogiri](https://github.com/sparklemotion/nokogiri)
 - [anemone](https://github.com/chriskite/anemone)
