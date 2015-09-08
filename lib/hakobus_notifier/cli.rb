@@ -11,20 +11,38 @@ module HakobusNotifier
         default_command :start
         desc "notify bus information", ""
         def start(src="156", dest="165")
-            terminal_notifier(get_date(src, dest), get_time(src, dest))
+            terminal_notifier(get_date(src, dest), get_time(src, dest), src, dest)
         end
     end
 end
 
-def terminal_notifier(str, time)
+def terminal_notifier(str, time, src, dest)
     if str.length == 0
         s = "unavailable"
         t = "本日の営業は終了しました"
+        return
     else
         s = str[0]
-        l = time[0]
+        t = time[0]
     end
-    TerminalNotifier.notify(t, title: s, sound: 'Hero', group: 'hakobus', activate: 'com.apple.Terminal')
+
+    title = table(src) + " ➔ " + table(dest)
+    body = "🚌 " + s + "（" + t.chomp + "）"
+    TerminalNotifier.notify(body, title: title, sound: 'Hero', group: 'hakobus', activate: 'com.apple.Terminal')
+end
+
+def table(src)
+    hakobus_table = {
+        函館駅前: 3,
+        函館地方気象台: 156, 
+        公立はこだて未来大学: 165, 
+    }
+
+    hakobus_table.each do |key, value|
+        if "#{value}" == "#{src}"
+            return "#{key}"
+        end
+    end
 end
 
 def get_date(src, dest)
