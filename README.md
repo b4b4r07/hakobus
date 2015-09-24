@@ -32,11 +32,10 @@ To run notification:
 
 	$ bundle exec hakobus-notifier
 	
-## Setup
+## Todo
 
-Add this line to your crontab:
-
-    */1 * * * *  bundle exec hakobus-notifier notify
+- [ ] Binarize
+- [ ] Support automatic notification (crond?)
 
 ## Contributing
 
